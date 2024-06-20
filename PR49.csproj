@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>C:\Users\Kolovratik\Desktop\Техникум ИС-21-2\3курс\Мдк 01.01\Практические работы\PR49\bin\Debug\netcoreapp3.1\ASP_GET.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
