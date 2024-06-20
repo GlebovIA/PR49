@@ -42,7 +42,7 @@ namespace PR49.Controllers
         /// <param name="Email">Почта пользователя</param>
         /// <param name="Password">Пароль пользователя</param>
         /// <returns>Данный метод предназначен для регистрации пользователя в базе данных</returns>
-        /// <response code="200">Пользователь успешно добавлен</response>
+        /// <response code="200">Успешный вход</response>
         /// <response code="400">Проблема аутентификации</response>
         /// <response code="401">Пользователь не найден</response>
         [Route("SignIn")]
@@ -59,6 +59,7 @@ namespace PR49.Controllers
                 Users User = userContext.Users.Where(x => x.email == Email && x.password == Password).First();
                 Random random = new Random();
                 User.token = random.Next(int.MinValue, int.MaxValue);
+                Users.Token = User.token;
                 userContext.SaveChanges();
                 return Json(User);
             }
